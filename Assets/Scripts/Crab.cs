@@ -93,4 +93,9 @@ public class Crab : MonoBehaviour {
             }
         }
     }
+
+    void OnDestroy() {
+        // gotta remember to kill tweens if this is destroyed or it'll get kinda obnoxious
+        Go.killAllTweensWithTarget(transform);
+    }
 }
